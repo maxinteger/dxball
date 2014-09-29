@@ -1,0 +1,38 @@
+{
+  "name": "DXBall",
+  "version": "0.0.1",
+  "description": "Ball game in ES6",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game",
+    "js"
+  ],
+  "author": "László Vadász",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-traceur": "latest",
+    "gulp-run-sequence": "latest",
+    "event-stream": "latest",
+    "gulp-changed": "latest",
+    "gulp-plumber": "latest",
+    "gulp-clean": "latest",
+    "gulp-notify": "latest",
+    "gulp-util": "latest",
+    "gulp-connect": "latest",
+    "gulp": "latest",
+    "requirejs": "latest",
+    "karma-requirejs": "latest",
+    "gulp-less": "latest",
+    "gulp-symlink": "latest",
+    "wiredep": "latest"
+  },
+  "devDependencies": {
+    "karma": "latest",
+    "karma-chrome-launcher": "latest",
+    "karma-jasmine": "latest",
+    "karma-phantomjs-launcher": "latest"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "DXBall",
+  "version": "0.0.1",
+  "authors": [
+    "Vadasz Laszlo <maxinteger@gmail.com>"
+  ],
+  "description": "ball game",
+  "main": "index.html",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "js",
+    "game"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "es6-module-loader": "latest",
+    "jquery": "latest",
+    "lodash": "latest",
+      "requirejs": "latest",
+    "traceur-runtime": "~0.0.66"
+  }
+}
