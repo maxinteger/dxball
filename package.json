@@ -27,7 +27,9 @@
     "karma-requirejs": "latest",
     "gulp-less": "latest",
     "gulp-symlink": "latest",
-    "wiredep": "latest"
+    "wiredep": "latest",
+    "run-sequence": "~1.0.1",
+    "gulp-webserver": "~0.8.3"
   },
   "devDependencies": {
     "karma": "latest",

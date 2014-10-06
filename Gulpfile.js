@@ -7,10 +7,12 @@
         clean = require('gulp-clean'),
         notify = require('gulp-notify'),
         es = require('event-stream'),
+        runSeq = require('run-sequence'),
     //plumber = require('gulp-plumber'),
         changed = require('gulp-changed'),
         traceur = require('gulp-traceur'),
         connect = require('gulp-connect'),
+        webserver = require('gulp-webserver'),
         symlink = require('gulp-symlink'),
         less = require('gulp-less');
 
@@ -80,9 +82,25 @@
             .pipe(connect.reload());
     });
 
+    gulp.task('connect', function() {
+        connect.server({
+            root: distDir,
+            livereload: true
+        });
+    });
+
+    gulp.task('webserver', function() {
+        gulp.src(['./dist/'])
+            .pipe(webserver({
+                livereload: true,
+                directoryListing: true,
+                open: true
+            }));
+    });
+
 
     gulp.task('dev', ['clean-dist'], function () {
-        runSeq('dev-assets', 'dev-less', 'dev-js', 'dev-html', function(){
+        runSeq('dev-assets', 'dev-less', 'dev-js', 'dev-html', 'connect', function(){
             gulp.watch(JSFiles, ['dev-js']);
             gulp.watch(HTMLFiles, ['dev-html']);
             gulp.watch(lessFiles, ['dev-less']);
